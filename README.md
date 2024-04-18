@@ -1,7 +1,7 @@
 # 🌽 LOCAL FARM | Fazenda Urbana
 ---------
 ## SOBRE
-Com a crescente ideia de fazendas urbanas sendo mais abrangente no dia-a-dia do consumidor e do produtor local, com prédios e empresas sendo montados para abranger um sistema de produção de hortaliças, vegetais e legumes. Viu-se a necessidade de um sistema mais robusto para o gerenciamento do mesmo, para que o fornecedor e produtor local entre como uma nova vertente no sistema, para que se tenha um mapeamento mais detalhado e por fim, ter uma análise de dados e escolher melhores decisões para a fazenda urbana, sendo assim, gerando lucro e rotatividade de fornecedores e consumidores. 
+Com a crescente ideia de fazendas urbanas sendo mais abrangente no dia-a-dia do consumidor e do produtor local, com prédios e empresas sendo montados para abranger um sistema de produção de hortaliças, vegetais e legumes. Viu-se a necessidade de um sistema mais robusto para o gerenciamento do mesmo, para que o fornecedor e produtor local entre como uma nova vertente no sistema, para que se tenha um mapeamento mais detalhado e por fim, ter uma análise de dados e escolher melhores decisões para a fazenda urbana, sendo assim, gerando lucro e rotatividade de fornecedores e consumidores. Chico moedas
 
 ---------
 ## Integrantes
