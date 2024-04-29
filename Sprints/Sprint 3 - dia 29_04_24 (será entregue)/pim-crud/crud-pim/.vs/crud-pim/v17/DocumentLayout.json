@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\migrations\\inicialcriacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\migrations\\inicialcriacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\migrations\\20211219050733_inicial-criacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\migrations\\20211219050733_inicial-criacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\models\\contexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\models\\contexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\migrations\\contextomodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\migrations\\contextomodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|c:\\users\\user\\documents\\backlogs\\sprints\\sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77B92AE0-B7DE-4BBE-94C8-BC1C20AA9488}|crud-pim\\crud-pim.csproj|solutionrelative:crud-pim\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Inicialcriacao.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Migrations\\Inicialcriacao.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Migrations\\Inicialcriacao.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Migrations\\Inicialcriacao.cs",
+              "RelativeToolTip": "crud-pim\\Migrations\\Inicialcriacao.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:28:13.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContextoModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Migrations\\ContextoModelSnapshot.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Migrations\\ContextoModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Migrations\\ContextoModelSnapshot.cs",
+              "RelativeToolTip": "crud-pim\\Migrations\\ContextoModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:28:06.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Contexto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Models\\Contexto.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Models\\Contexto.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Models\\Contexto.cs",
+              "RelativeToolTip": "crud-pim\\Models\\Contexto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:25:43.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20211219050733_Inicial-criacao.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Migrations\\20211219050733_Inicial-criacao.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Migrations\\20211219050733_Inicial-criacao.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Migrations\\20211219050733_Inicial-criacao.cs",
+              "RelativeToolTip": "crud-pim\\Migrations\\20211219050733_Inicial-criacao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:27:58.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Models\\Produto.cs",
+              "RelativeToolTip": "crud-pim\\Models\\Produto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:29:00.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Program.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Program.cs",
+              "RelativeToolTip": "crud-pim\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T13:25:46.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutosController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Controllers\\ProdutosController.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "crud-pim\\Controllers\\ProdutosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T18:46:51.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "crud-pim\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\backlogs\\Sprints\\Sprint 3 - dia 29_04_24 (ser\u00E1 entregue)\\pim-crud\\crud-pim\\crud-pim\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "crud-pim\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T18:46:44.929Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
