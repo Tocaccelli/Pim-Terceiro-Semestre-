@@ -7,39 +7,35 @@ Com a crescente ideia de fazendas urbanas sendo mais abrangente no dia-a-dia do 
 ## Integrantes
 1. [Gabriel Pinelli Silva (PO)](https://github.com/Tocaccelli) </br>
 2. [Luana Martini         (Scrum Master)](https://github.com/luana-martini) </br>
-3. Arieli                (Dev) </br>
+3. [Arielli         (Dev)](https://github.com/arielijs) 
 4. [Beatriz               (Dev)](https://github.com/ttrizsg) </br>
-5. [Mateus                (Dev))](https://github.com/omattaeus) </br>
-6. Fábio                 (Dev) </br>
+5. [Mateus                (Dev))](https://github.com/fabioluisbb) </br>
+6. [Fábio                (Dev))](https://github.com/omattaeus) </br>
 
 ---------
 
 ## SOBRE AS PASTAS
-### BACKLOG
-Na pasta abaixo temos todos os backlog, ou seja, na pasta podemos encontrar a parte de retrospectitiva, resumo do backlog e o planejamento de entrega das sprints.
+### BACKLOG-PRODUTO
+Na pasta abaixo temos todos os backlog, ou seja, na pasta podemos encontrar a parte do backlog, sprint-backlog, daily, retrospectiva, gráfico de burndown para monitoramento do time e monitorar as entregas.
 
-      /backlog
+      /BackLog Produto
 
-### BACKLOGS-PIM
-Na pasta abaixo temos todos os backlogs do projeto, ou seja, do PIM: Projeto Integrado Multidicisplinar. Na pasta podemos encontrar a parte textual do projeto, como introdução, resumo, considerações finais etc.
+- [Backlog Produto](https://github.com/Tocaccelli/Pim-Terceiro-Semestre-/tree/master/BackLog%20Produto)
 
-      /backlogs-pim
+      
+### Organização do  Time
+Na pasta abaixo temos todos as organizações do time, ou seja, arquivos que foram substituido por outras versões mais atualizados. É uma pasta de backup de arquivos, ou seja, caso necessite futuramente, os arquivos estarão salvos nessa pasta.
 
-### BACKLOGS-PRODUTO
-Na pasta abaixo temos todos os backlogs do produto, ou seja, temos as partes dos requisitos do sistema e também podemos encontrar uma pesquisa sobre a fazenda urbana e sua contextualização com ESG, ODS e sobre a COP30.
+      /Organização do time
 
-      /backlogs-produto
+- [Organização do time](https://github.com/Tocaccelli/Pim-Terceiro-Semestre-/tree/master/Organiza%C3%A7%C3%A3o%20do%20time)
 
-### BACKLOGS-SPRINT
-Na pasta abaixo temos todos os backlogs das sprints, ou seja, temos todo o planejamento da semana seperado por pastas, também estamos utilizando o Trello em conjunto com o Git para o uso das pastas. Nessa pasta podemos encontrar o planejamento que será semanal, como a UML, projeto de interface, diagrama E-R e manual de uso do sistema.
+### Sprints
+Na pasta abaixo temos todos as Sprints que serão entregas, ou seja, baseado no backlog e sprint-backlog, as sprints serão entregues e salvos nas pasta respectivas sprints.
 
-      /backlogs-sprints
+      /Sprints
 
-### PLANEJAMENTO DE ENTREGA DA SPRINT
-Na pasta abaixo temos todos os planejamento de entrega da sprint, ou seja, temos todo o planejamento de entrega da sprint com todas as datas e quais entregas será feita.
-
-      /planejamento de entrega da sprint
-
+- [Sprints](https://github.com/Tocaccelli/Pim-Terceiro-Semestre-/tree/master/Sprints)
 
 ---------
 
