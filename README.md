@@ -9,8 +9,8 @@ Com a crescente ideia de fazendas urbanas sendo mais abrangente no dia-a-dia do 
 2. [Luana Martini         (Scrum Master)](https://github.com/luana-martini) </br>
 3. [Arielli         (Dev)](https://github.com/arielijs) 
 4. [Beatriz               (Dev)](https://github.com/ttrizsg) </br>
-5. [Mateus                (Dev))](https://github.com/fabioluisbb) </br>
-6. [Fábio                (Dev))](https://github.com/omattaeus) </br>
+5. [Mateus                (Dev))](https://github.com/omattaeus) </br>
+6. [Fábio                (Dev))](https://github.com/fabioluisbb) </br>
 
 ---------
 
