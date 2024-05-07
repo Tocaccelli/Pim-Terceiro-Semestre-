@@ -49,6 +49,12 @@ O repositório também estará disponível para estudantes e desenvolvedores no 
 ### Fork, Commit e Pull Request
 No repositório aqui no GitHub tem a opção de "Fork", logo no menu acima no canto direito. Após ter feito o Fork e o Git Clone, terá como fazer os commits e pull request para o projeto.
 #### Git Commit (comandos)
+##### Antes de fazer o Commit, fazer o comando de Git Pull
+##### Git Pull para puxar as pastas/arquivos atualizados
+    git pull
+##### Caso der erro no Git Pull, tente o seguinte comando
+    git pull origin master  
+##### Git Commit
     git init
     git add .
     git remote add origin "url do repositório do qual foi feito o fork"
