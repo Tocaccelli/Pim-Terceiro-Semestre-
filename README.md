@@ -58,6 +58,7 @@ No repositório aqui no GitHub tem a opção de "Fork", logo no menu acima no ca
     git init
     git add .
     git remote add origin "url do repositório do qual foi feito o fork"
+    git commit -m "texto_do_commit"
     git push origin "sua-branch"
 
 Logo após o commit, podera estar fazendo o pull request para o projeto :)
