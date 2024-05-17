@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<IGrouping<Department, SalesRecord>>
 
 @{
-    ViewData["Title"] = "Grouping Search";
+    ViewData["Title"] = "Pesquisa de Agrupamento";
     DateTime minDate = DateTime.Parse(ViewData["minDate"] as string);
     DateTime maxDate = DateTime.Parse(ViewData["maxDate"] as string);
 }
@@ -13,15 +13,15 @@
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
                 <div class="form-group">
-                    <label for="minDate">Min Date</label>
+                    <label for="minDate">Data Min</label>
                     <input type="date" class="form-control" name="minDate" value=@ViewData["minDate"]>
                 </div>
                 <div class="form-group">
-                    <label for="maxDate">Max Date</label>
+                    <label for="maxDate">Data Max</label>
                     <input type="date" class="form-control" name="maxDate" value=@ViewData["maxDate"]>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Filter</button>
+            <button type="submit" class="btn btn-primary">Filtros</button>
         </form>
     </div>
 </nav>
@@ -37,13 +37,13 @@
                 <thead>
                     <tr class="success">
                         <th>
-                            Date
+                            Data
                         </th>
                         <th>
-                            Amount
+                            Quantia
                         </th>
                         <th>
-                            Seller
+                            Vendedor
                         </th>
                         <th>
                             Status
