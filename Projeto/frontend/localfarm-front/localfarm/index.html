@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="Página de login para acesso ao sistema Local Farm">
+    <meta name="keywords" content="login, acesso, Local Farm">
+    <meta name="author" content="Seu Nome">
+    <link href="/localfarm/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-custom-green flex h-screen">
+    <div class="flex-1 flex items-center justify-center">
+        <img src="/localfarm/img/LOCAL FARM.png" alt="Logo Local Farm" class="w-34">
+    </div>
+    <div class="flex-1 flex items-center justify-center p-20">
+        <div class="bg-custom-beige bg-opacity-75 p-20 rounded-[63px] shadow-lg w-96 text-center">
+            <h1 class="text-custom-brown text-2xl mb-2">Seja bem-vindo!</h1>
+            <p class="text-custom-brown text-sm mb-8">Em caso de perda de acesso, entre em contato com o seu gerente ou supervisor</p>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Insira seu login" required class="w-full p-2 mb-4 border border-gray-300 rounded-[5px]">
+                <input type="password" placeholder="Insira sua senha" required class="w-full p-2 mb-4 border border-gray-300 rounded-[5px]">
+                <input type="submit" value="ENTRAR" class="bg-white border border-custom-brown text-custom-brown py-2 px-4 rounded-[5px] cursor-pointer hover:bg-custom-brown hover:text-white transition duration-300">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

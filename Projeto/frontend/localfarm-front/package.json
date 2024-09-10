@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "npm-watch": "^0.13.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "scripts": {
+    "build": "npx tailwindcss build localfarm/css/style.css -o localfarm/css/output.css",
+    "watch": "npx tailwindcss -i localfarm/css/style.css -o localfarm/css/output.css --watch"
+  }
+}
