@@ -3,10 +3,11 @@ package br.com.localfarm.app.application.services;
 import br.com.localfarm.app.domain.models.Supplier;
 import br.com.localfarm.app.infrastructure.persistence.SupplierRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,8 +36,8 @@ public class SupplierService {
         supplierRepository.deleteById(id);
     }
 
-    public List<Supplier> getAllSuppliers() {
-        return supplierRepository.findAll();
+    public Page<Supplier> getAllSuppliers(Pageable pageable) {
+        return supplierRepository.findAll(pageable);
     }
 
     public Optional<Supplier> getSupplierById(Long id) {

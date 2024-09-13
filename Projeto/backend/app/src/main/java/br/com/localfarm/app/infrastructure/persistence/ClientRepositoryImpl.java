@@ -3,6 +3,8 @@ package br.com.localfarm.app.infrastructure.persistence;
 import br.com.localfarm.app.domain.models.Client;
 import br.com.localfarm.app.domain.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -24,6 +26,10 @@ public class ClientRepositoryImpl {
 
     public List<Client> findAll() {
         return clientRepository.findAll();
+    }
+
+    public Page<Client> findAll(Pageable pageable) {
+        return clientRepository.findAll(pageable);
     }
 
     public void deleteById(Long id) {
