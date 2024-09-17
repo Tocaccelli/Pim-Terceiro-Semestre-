@@ -1,5 +1,6 @@
 package br.com.localfarm.app.security;
 
+import br.com.localfarm.app.infrastructure.persistence.config.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,12 +30,10 @@ public class SecurityConfig {
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .requestMatchers("/authenticate").permitAll()
-                .requestMatchers("/users/**").hasRole("ADMIN")
-                .requestMatchers("/units-of-measure/**").hasAnyRole("ADMIN", "MANAGER")
-                .requestMatchers("/clients/**").hasAnyRole("ADMIN", "MANAGER")
-                .requestMatchers("/products/**").hasAnyRole("ADMIN", "MANAGER")
-                .requestMatchers("/product-movements/**").hasAnyRole("ADMIN", "OPERATOR")
+                .requestMatchers(JwtUtil.ENDPOINTS_WITH_USER_CAN_ACCESS).permitAll()
+                .requestMatchers(JwtUtil.ENDPOINTS_WITH_ADMIN_CAN_ACCESS).hasRole("ADMIN")
+                .requestMatchers(JwtUtil.ENDPOINTS_WITH_MANAGER_CAN_ACCESS).hasAnyRole("ADMIN", "MANAGER")
+                .requestMatchers(JwtUtil.ENDPOINTS_WITH_OPERATOR_CAN_ACCESS).hasAnyRole("ADMIN", "OPERATOR")
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic(Customizer.withDefaults())

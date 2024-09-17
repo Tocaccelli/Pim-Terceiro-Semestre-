@@ -1,4 +1,9 @@
+server:
+  port: 8081
+
 spring:
+  application:
+    name: client-service
   datasource:
     url: jdbc:sqlserver://localhost:1433;databaseName=localFarm
     username: OMATTAEUS
@@ -11,3 +16,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.SQLServerDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

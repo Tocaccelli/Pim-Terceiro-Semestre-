@@ -1,7 +1,7 @@
-package br.com.localfarm.app.application.services;
+package com.localfarm.client.application.services;
 
-import br.com.localfarm.app.domain.models.Client;
-import br.com.localfarm.app.infrastructure.persistence.ClientRepositoryImpl;
+import com.localfarm.client.domain.models.Client;
+import com.localfarm.client.infrastructure.persistence.ClientRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

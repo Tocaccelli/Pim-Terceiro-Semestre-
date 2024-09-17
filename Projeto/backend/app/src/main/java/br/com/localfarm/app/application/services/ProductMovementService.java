@@ -3,10 +3,11 @@ package br.com.localfarm.app.application.services;
 import br.com.localfarm.app.domain.models.ProductMovement;
 import br.com.localfarm.app.infrastructure.persistence.ProductMovementRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,8 +36,8 @@ public class ProductMovementService {
         productMovementRepository.deleteById(id);
     }
 
-    public List<ProductMovement> getAllProductMovements() {
-        return productMovementRepository.findAll();
+    public Page<ProductMovement> getAllProductMovements(Pageable pageable) {
+        return productMovementRepository.findAll(pageable);
     }
 
     public Optional<ProductMovement> getProductMovementById(Long id) {

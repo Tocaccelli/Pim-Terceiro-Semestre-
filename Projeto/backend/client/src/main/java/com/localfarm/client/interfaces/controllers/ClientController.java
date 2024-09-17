@@ -1,7 +1,7 @@
-package br.com.localfarm.app.interfaces.controllers;
+package com.localfarm.client.interfaces.controllers;
 
-import br.com.localfarm.app.domain.models.Client;
-import br.com.localfarm.app.application.services.ClientService;
+import com.localfarm.client.domain.models.Client;
+import com.localfarm.client.application.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
