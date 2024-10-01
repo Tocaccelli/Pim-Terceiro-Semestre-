@@ -30,8 +30,8 @@ public class SecurityConfig {
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .requestMatchers(JwtUtil.ENDPOINTS_WITH_USER_CAN_ACCESS).permitAll()
                 .requestMatchers(JwtUtil.ENDPOINTS_WITH_ADMIN_CAN_ACCESS).hasRole("ADMIN")
+                .requestMatchers(JwtUtil.ENDPOINTS_WITH_USER_CAN_ACCESS).permitAll()
                 .requestMatchers(JwtUtil.ENDPOINTS_WITH_MANAGER_CAN_ACCESS).hasAnyRole("ADMIN", "MANAGER")
                 .requestMatchers(JwtUtil.ENDPOINTS_WITH_OPERATOR_CAN_ACCESS).hasAnyRole("ADMIN", "OPERATOR")
                 .anyRequest().authenticated()
