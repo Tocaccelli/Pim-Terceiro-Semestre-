@@ -1,3 +1,6 @@
+server:
+  port: 8761
+
 spring:
   datasource:
     url: jdbc:sqlserver://localhost:1433;databaseName=localFarm
@@ -11,3 +14,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.SQLServerDialect
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false

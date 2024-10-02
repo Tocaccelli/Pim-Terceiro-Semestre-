@@ -1,15 +1,13 @@
-package br.com.localfarm.app;
+package br.com.localfarm.productmovment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaServer
-public class Startup {
+public class ProductmovmentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Startup.class, args);
+		SpringApplication.run(ProductmovmentApplication.class, args);
 	}
 
 }
