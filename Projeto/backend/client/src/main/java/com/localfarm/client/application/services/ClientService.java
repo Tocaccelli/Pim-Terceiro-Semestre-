@@ -1,20 +1,26 @@
 package com.localfarm.client.application.services;
 
 import com.localfarm.client.domain.models.Client;
-import com.localfarm.client.infrastructure.persistence.ClientRepositoryImpl;
+import com.localfarm.client.domain.models.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
+import jakarta.persistence.EntityNotFoundException;
+
 import java.util.Optional;
 
 @Service
 public class ClientService {
 
+    private final ClientRepository clientRepository;
+
     @Autowired
-    private ClientRepositoryImpl clientRepository;
+    public ClientService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
 
     @PreAuthorize("hasRole('ROLE_USER')")
     public Client createClient(Client client) {
@@ -28,7 +34,7 @@ public class ClientService {
             client.setId(id);
             return clientRepository.save(client);
         }
-        return null;
+        throw new EntityNotFoundException("Client not found");
     }
 
     @PreAuthorize("hasRole('ROLE_USER')")

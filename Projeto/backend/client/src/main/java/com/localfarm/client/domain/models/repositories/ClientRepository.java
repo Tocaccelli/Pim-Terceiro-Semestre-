@@ -1,4 +1,4 @@
-package com.localfarm.client.domain.repositories;
+package com.localfarm.client.domain.models.repositories;
 
 import com.localfarm.client.domain.models.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
