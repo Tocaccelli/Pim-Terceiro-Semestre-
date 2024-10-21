@@ -1,7 +1,6 @@
 package br.com.localfarm.app.infrastructure.persistence;
 
 import br.com.localfarm.app.domain.models.Supplier;
-import br.com.localfarm.app.domain.repositories.SupplierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

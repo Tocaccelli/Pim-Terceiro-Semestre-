@@ -2,10 +2,12 @@ server:
   port: 8761
 
 spring:
+  application:
+    name: localfarm-server
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=localFarm
-    username: OMATTAEUS
-    password: 12345678@Ta
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     hibernate:

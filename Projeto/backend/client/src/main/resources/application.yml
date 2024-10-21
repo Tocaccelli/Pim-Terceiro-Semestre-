@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   application:
@@ -16,8 +16,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.SQLServerDialect
-    main:
-      allow-circular-references=true:
+  config:
+    import: "optional:configserver:http://localhost:8888"
 
 eureka:
   client:
