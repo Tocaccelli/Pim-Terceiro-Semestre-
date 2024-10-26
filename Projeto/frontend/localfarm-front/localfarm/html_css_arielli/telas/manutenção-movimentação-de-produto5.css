@@ -113,3 +113,28 @@ img {
     margin: 20px;
        
 }
+.btn4{
+    margin: 30px;
+    background-color: #405743;
+    color:white;
+    width: 80px; 
+    height: 39.64px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 15px;
+    margin-top: -10px;
+
+}
+.btn5{
+    margin: 15px;
+    background-color: #405743;
+    color:white;
+    width: 80px; 
+    height: 39.64px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 15px;
+    margin-top: -10px;
+    margin-left: 5px;
+
+}
