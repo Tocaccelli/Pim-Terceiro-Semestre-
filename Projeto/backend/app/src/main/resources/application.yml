@@ -2,22 +2,16 @@ server:
   port: 8761
 
 spring:
-  datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=localFarm
-    username: OMATTAEUS
-    password: 12345678@Ta
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.SQLServerDialect
+  application:
+    name: eureka-server
 
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
-  server:
-    enable-self-preservation: false
+    registerWithEureka: false
+    fetchRegistry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

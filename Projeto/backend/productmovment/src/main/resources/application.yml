@@ -1,1 +1,42 @@
-spring.application.name=productmovment
+server:
+  port: 8084
+
+spring:
+  application:
+    name: product-movment-service
+  config:
+    import:
+      - optional:configserver
+  cloud:
+    config:
+      import-check:
+        enabled: false
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    baseline-on-migrate: true
+  main:
+    allow-circular-references: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+# JWT Configuration
+jwt:
+  secret: ${SECRET_JWT}
+  expiration: ${TIME_JWT}
