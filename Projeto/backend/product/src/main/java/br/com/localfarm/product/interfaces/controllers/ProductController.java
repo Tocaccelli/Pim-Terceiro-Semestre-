@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/p")
+@CrossOrigin(origins = "*")
 public class ProductController {
 
     @Autowired
@@ -30,9 +31,9 @@ public class ProductController {
 
     // Acesso permitido para "ADMINISTRADOR" e "GERENCIAL"
     @PutMapping("/atualizar/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable Long id, @Valid @RequestBody Product product, @RequestParam Long clientId) {
+    public ResponseEntity<Product> updateProduct(@PathVariable Long id, @Valid @RequestBody Product product) {
         try {
-            Product updatedProduct = productService.updateProduct(id, product, clientId);
+            Product updatedProduct = productService.updateProduct(id, product);
             return ResponseEntity.ok(updatedProduct);
         } catch (ProductNotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
