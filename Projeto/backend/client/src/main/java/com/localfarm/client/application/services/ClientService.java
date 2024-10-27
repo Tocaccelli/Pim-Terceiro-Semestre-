@@ -22,12 +22,10 @@ public class ClientService {
         this.clientRepository = clientRepository;
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     public Client createClient(Client client) {
         return clientRepository.save(client);
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     public Client updateClient(Long id, Client client) {
         Optional<Client> existingClient = clientRepository.findById(id);
         if (existingClient.isPresent()) {
@@ -37,7 +35,6 @@ public class ClientService {
         throw new EntityNotFoundException("Client not found");
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     public void deleteClient(Long id) {
         clientRepository.deleteById(id);
     }

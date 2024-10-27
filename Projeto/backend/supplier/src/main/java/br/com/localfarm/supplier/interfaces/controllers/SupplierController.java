@@ -9,27 +9,23 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/suppliers")
-@CrossOrigin(origins = "*")
+@RequestMapping("/supplier")
 public class SupplierController {
 
     @Autowired
     private SupplierService supplierService;
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping
     public ResponseEntity<Supplier> createSupplier(@Valid @RequestBody Supplier supplier) {
         Supplier createdSupplier = supplierService.createSupplier(supplier);
         return new ResponseEntity<>(createdSupplier, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     @PutMapping("/{id}")
     public ResponseEntity<Supplier> updateSupplier(@PathVariable @NotNull Long id, @Valid @RequestBody Supplier supplier) {
         try {
@@ -40,8 +36,7 @@ public class SupplierController {
         }
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/excluir/{id}")
     public ResponseEntity<Void> deleteSupplier(@PathVariable @NotNull Long id) {
         try {
             supplierService.deleteSupplier(id);

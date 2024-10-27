@@ -9,6 +9,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "user_roles")
 public class UserRole {
 
     @Id
@@ -20,11 +23,4 @@ public class UserRole {
 
     @Column(name = "role_id")
     private Long roleId;
-
-    public UserRole() {}
-
-    public UserRole(Long userId, Long roleId) {
-        this.userId = userId;
-        this.roleId = roleId;
-    }
 }

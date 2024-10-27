@@ -24,6 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> user = userService.findByUsername(username);
+        user.get().getRoles().forEach(role -> System.out.println("Role: " + role.getName()));
         if (user.isEmpty()) {
             throw new UsernameNotFoundException("User not found");
         }
@@ -31,6 +32,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 user.get().getUsername(),
                 user.get().getPassword(),
                 userService.mapRolesToAuthorities(user.get().getRoles())
-        );
-    }
+        );}
 }

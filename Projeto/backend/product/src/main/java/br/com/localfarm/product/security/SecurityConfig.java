@@ -11,11 +11,13 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -31,19 +33,29 @@ public class SecurityConfig {
     }
 
     @Bean
-    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .requestMatchers(EndpointsUtil.ENDPOINTS_ANYONE_CAN_ACCESS).permitAll()
-                .requestMatchers(EndpointsUtil.ENDPOINTS_WITH_ADMINISTRADOR_CAN_ACCESS).hasRole("ADMINISTRADOR")
-                .requestMatchers(EndpointsUtil.ENDPOINTS_WITH_GERENCIAL_CAN_ACCESS).hasAnyRole("ADMINISTRADOR", "GERENCIAL")
-                .requestMatchers(EndpointsUtil.ENDPOINTS_WITH_OPERACIONAL_CAN_ACCESS).hasAnyRole("ADMINISTRADOR", "GERENCIAL", "OPERACIONAL")
-                .anyRequest().authenticated()
-                .and()
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(authz -> authz
+                        .requestMatchers(EndpointsUtil.ENDPOINTS_ANYONE_CAN_ACCESS).permitAll()
+                        // Permitir apenas para ADMINISTRADOR
+                        .requestMatchers(EndpointsUtil.ENDPOINTS_WITH_ADMINISTRADOR_CAN_ACCESS).hasAuthority("ADMINISTRADOR")
+                        // Permitir para ADMINISTRADOR e GERENCIAL
+                        .requestMatchers(EndpointsUtil.ENDPOINTS_WITH_GERENCIAL_CAN_ACCESS).hasAnyAuthority("ADMINISTRADOR", "GERENCIAL")
+                        // Permitir para ADMINISTRADOR, GERENCIAL e OPERACIONAL
+                        .requestMatchers(EndpointsUtil.ENDPOINTS_WITH_OPERACIONAL_CAN_ACCESS).hasAnyAuthority("ADMINISTRADOR", "GERENCIAL", "OPERACIONAL")
+                        .anyRequest().authenticated()
+                )
                 .httpBasic(Customizer.withDefaults())
-                .csrf(csrf -> csrf.disable())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)
+                .logout(logout -> logout
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                        .logoutSuccessUrl("/")
+                        .invalidateHttpSession(true)
+                        .deleteCookies("JSESSIONID")
+                );
 
-        http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 

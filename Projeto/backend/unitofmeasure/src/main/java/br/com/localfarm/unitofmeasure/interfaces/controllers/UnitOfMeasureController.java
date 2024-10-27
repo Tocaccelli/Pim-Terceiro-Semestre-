@@ -15,20 +15,17 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/units-of-measure")
-@ CrossOrigin(origins = "*")
 public class UnitOfMeasureController {
 
     @Autowired
     private UnitOfMeasureService unitOfMeasureService;
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping
     public ResponseEntity<UnitOfMeasure> createUnitOfMeasure(@Valid @RequestBody UnitOfMeasure unitOfMeasure) {
         UnitOfMeasure createdUnit = unitOfMeasureService.createUnitOfMeasure(unitOfMeasure);
         return new ResponseEntity<>(createdUnit, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
     @PutMapping("/{id}")
     public ResponseEntity<UnitOfMeasure> updateUnitOfMeasure(@PathVariable Long id, @Valid @RequestBody UnitOfMeasure unitOfMeasure) {
         try {
@@ -39,8 +36,7 @@ public class UnitOfMeasureController {
         }
     }
 
-    @PreAuthorize("hasRole('ROLE_USER')")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/excluir/{id}")
     public ResponseEntity<Void> deleteUnitOfMeasure(@PathVariable Long id) {
         try {
             unitOfMeasureService.deleteUnitOfMeasure(id);

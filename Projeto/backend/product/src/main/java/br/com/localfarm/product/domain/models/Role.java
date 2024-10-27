@@ -20,6 +20,11 @@ public class Role {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private RoleEnum name;
+
+    @Override
+    public String toString() {
+        return name.name();
+    }
 }

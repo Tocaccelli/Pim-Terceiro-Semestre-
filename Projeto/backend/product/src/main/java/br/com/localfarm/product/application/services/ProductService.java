@@ -10,7 +10,6 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
@@ -30,21 +29,20 @@ public class ProductService {
         this.clientFeignClient = clientFeignClient;
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMINISTRADOR') or hasRole('ROLE_GERENCIAL')")
     @Transactional
-    public Product createProduct(@Valid Product product, Long clientId) {
+    public Product createProduct(@Valid Product product) {
         // Verifica se o cliente existe antes de criar o produto
+        /**
         Client client = clientFeignClient.getClientById(clientId);
         if (client == null) {
             throw new InvalidProductException("Client not found with id: " + clientId);
         }
+         **/
 
         validateProduct(product);
-        product.setId(clientId);
         return productRepository.save(product);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMINISTRADOR') or hasRole('ROLE_GERENCIAL')")
     @Transactional
     public Product updateProduct(Long id, @Valid Product product, Long clientId) {
         validateProduct(product);
@@ -58,13 +56,11 @@ public class ProductService {
         Optional<Product> existingProduct = productRepository.findById(id);
         if (existingProduct.isPresent()) {
             product.setId(id);
-            product.setId(clientId);
             return productRepository.save(product);
         }
         throw new ProductNotFoundException("Product not found with id: " + id);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMINISTRADOR')")
     @Transactional
     public void deleteProduct(Long id) {
         if (!productRepository.existsById(id)) {
@@ -73,12 +69,10 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMINISTRADOR') or hasRole('ROLE_GERENCIAL') or hasRole('ROLE_OPERACIONAL')")
     public Page<Product> getAllProducts(Pageable pageable) {
         return productRepository.findAll(pageable);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMINISTRADOR') or hasRole('ROLE_GERENCIAL') or hasRole('ROLE_OPERACIONAL')")
     public Optional<Product> getProductById(Long id) {
         return productRepository.findById(id);
     }

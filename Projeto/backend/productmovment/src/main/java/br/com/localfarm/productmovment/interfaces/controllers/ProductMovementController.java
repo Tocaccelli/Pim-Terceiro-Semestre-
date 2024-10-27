@@ -36,7 +36,7 @@ public class ProductMovementController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/excluir/{id}")
     public ResponseEntity<Void> deleteProductMovement(@PathVariable Long id) {
         try {
             productMovementService.deleteProductMovement(id);
