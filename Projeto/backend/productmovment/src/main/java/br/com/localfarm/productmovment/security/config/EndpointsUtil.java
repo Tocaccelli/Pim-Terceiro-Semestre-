@@ -5,7 +5,10 @@ public class EndpointsUtil {
     // Endpoints acessíveis para todos
     public static final String[] ENDPOINTS_ANYONE_CAN_ACCESS = {
             "/api/users/register",
-            "/api/users/login"
+            "/api/users/login",
+            "/product-movements",
+            "/product-movements/**",
+            "/product-movements/**/**"
     };
 
     // Endpoints acessíveis apenas para Administrador Geral

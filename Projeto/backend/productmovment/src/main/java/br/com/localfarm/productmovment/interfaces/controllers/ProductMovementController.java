@@ -1,6 +1,7 @@
 package br.com.localfarm.productmovment.interfaces.controllers;
 
 import br.com.localfarm.productmovment.application.services.ProductMovementService;
+import br.com.localfarm.productmovment.domain.events.ProductUpdatedEvent;
 import br.com.localfarm.productmovment.domain.models.ProductMovement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,8 +55,14 @@ public class ProductMovementController {
 
     @GetMapping("/{id}")
     public ResponseEntity<ProductMovement> getProductMovementById(@PathVariable Long id) {
-        Optional<ProductMovement> productMovement = productMovementService.getProductMovementById(id);
+        Optional<ProductMovement> productMovement = Optional.ofNullable(productMovementService.getProductMovementById(id));
         return productMovement.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
-                              .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @PostMapping("/product-updated")
+    public ResponseEntity<Void> handleProductUpdatedEvent(@Valid @RequestBody ProductUpdatedEvent event) {
+        productMovementService.productUpdated().accept(event);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

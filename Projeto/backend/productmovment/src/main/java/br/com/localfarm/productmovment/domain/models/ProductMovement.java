@@ -21,8 +21,8 @@ public class ProductMovement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "Date is mandatory")
-    private LocalDateTime date;
+    @NotNull(message = "Movement date is mandatory")
+    private LocalDateTime movementDate;
 
     @NotBlank(message = "Type is mandatory")
     private String type; // Entry or Exit
@@ -32,4 +32,10 @@ public class ProductMovement {
 
     @NotBlank(message = "Purpose is mandatory")
     private String purpose; // Purchase, Sale, or Production
+
+    @NotNull(message = "Product ID is mandatory")
+    @Column(name = "product_id", nullable = false)
+    private Long productId; // Reference to the product ID
+
+    private LocalDateTime updatedAt; // Timestamp da última atualização
 }
