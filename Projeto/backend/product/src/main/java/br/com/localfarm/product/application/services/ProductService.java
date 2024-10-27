@@ -86,7 +86,7 @@ public class ProductService {
                 });
     }
 
-    private void updateProductMovements(Product product) {
+    public void updateProductMovements(Product product) {
         // Chama o serviço de movimento de produtos para atualizar em cascata
         String url = "http://localhost:8084/product-movements/product-updated";
         ProductUpdatedEvent event = new ProductUpdatedEvent(
@@ -100,7 +100,7 @@ public class ProductService {
         restTemplate.postForEntity(url, event, Void.class);
     }
 
-    private void validateProduct(Product product) {
+    public void validateProduct(Product product) {
         if (product.getName() == null || product.getName().trim().isEmpty()) {
             throw new InvalidProductException("Product name must not be null or empty");
         }
