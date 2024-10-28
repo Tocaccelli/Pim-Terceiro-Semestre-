@@ -3,11 +3,11 @@
     padding: 0;
 }
 body{
-    background-color: #FFEBCA;
+    background-color: #f1e9e9;
     
 }
 nav {
-    background:#405743;
+    background:#85ab5c;
     height: 135px;
 }
 body nav ul li a {
@@ -108,11 +108,11 @@ th {
 td {
     border: none;
 }
-img {
+
+ img {
     width: 150px;
     height: 110px;
-    margin: 20px;
-       
+    margin: 20px;      
 }
 .btn4{
     margin: 30px;

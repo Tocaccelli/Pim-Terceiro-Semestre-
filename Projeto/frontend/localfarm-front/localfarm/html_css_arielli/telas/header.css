@@ -1,0 +1,24 @@
+nav {
+    background:#85ab5c;
+    height: 135px;
+    display: flex;
+    align-items:center;
+    
+    
+
+}
+.header{
+    color:white;
+    text-decoration: none;
+    font-family: Poppins;
+    padding: 40px; 
+    justify-content: space-between;
+    list-style: none;
+    
+
+}
+img {
+    width: 150px;
+    height: 110px;
+    margin: 20px;      
+}
