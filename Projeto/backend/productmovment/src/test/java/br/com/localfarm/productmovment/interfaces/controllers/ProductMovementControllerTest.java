@@ -18,6 +18,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Consumer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
@@ -123,7 +125,7 @@ class ProductMovementControllerTest {
     @DisplayName("Deve retornar NOT_FOUND ao tentar buscar um movimento de produto inexistente por ID")
     void getProductMovementById_ShouldReturnNotFound() {
         BDDMockito.given(productMovementService.getProductMovementById(anyLong()))
-                .willThrow(new IllegalArgumentException("ProductMovement not found"));
+                .willReturn(null);
 
         ResponseEntity<ProductMovement> response = productMovementController.getProductMovementById(1L);
 
@@ -134,6 +136,13 @@ class ProductMovementControllerTest {
     @DisplayName("Deve processar evento de atualização de produto e retornar OK")
     void handleProductUpdatedEvent_ShouldReturnOk() {
         ProductUpdatedEvent event = new ProductUpdatedEvent(100L, "Produto Teste", "PROD100", "Categoria Teste");
+
+        BDDMockito.given(productMovementService.productUpdated()).willReturn((Consumer<ProductUpdatedEvent>) (evt) -> {
+            assertEquals(event.getProductId(), evt.getProductId());
+            assertEquals(event.getProductName(), evt.getProductName());
+            assertEquals(event.getProductCode(), evt.getProductCode());
+            assertEquals(event.getCategory(), evt.getCategory());
+        });
 
         ResponseEntity<Void> response = productMovementController.handleProductUpdatedEvent(event);
 
