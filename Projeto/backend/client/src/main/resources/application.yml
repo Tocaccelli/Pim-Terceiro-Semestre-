@@ -1,23 +1,42 @@
 server:
-  port: 8081
+  port: 8083
 
 spring:
   application:
-    name: client-service
+    name: cliente-service
+  config:
+    import:
+      - optional:configserver
+  cloud:
+    config:
+      import-check:
+        enabled: false
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=localFarm
-    username: OMATTAEUS
-    password: 12345678@Ta
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.SQLServerDialect
+  flyway:
+    baseline-on-migrate: true
+  main:
+    allow-circular-references: true
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+# JWT Configuration
+jwt:
+  secret: ${SECRET_JWT}
+  expiration: ${TIME_JWT}

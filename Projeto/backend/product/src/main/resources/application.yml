@@ -1,1 +1,56 @@
-spring.application.name=product
+server:
+  port: 8082
+
+spring:
+  application:
+    name: product-service
+  config:
+    import:
+      - optional:configserver
+  cloud:
+    config:
+      import-check:
+        enabled: false
+    stream:
+      bindings:
+        productUpdated-out-0:
+          destination: product-updates
+          content-type: application/json
+      rabbit:
+        binder:
+          addresses: ${MQ_URL}
+          username: ${MQ_USER}
+          password: ${MQ_PASSWORD}
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    baseline-on-migrate: true
+  main:
+    allow-circular-references: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+# JWT Configuration
+jwt:
+  secret: ${SECRET_JWT}
+  expiration: ${TIME_JWT}
+
+logging:
+  level:
+    org.springframework.security: DEBUG
